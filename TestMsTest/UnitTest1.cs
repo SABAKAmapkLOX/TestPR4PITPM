@@ -1,12 +1,19 @@
+using BenchmarkDotNet.Attributes;
+using TestLib;
+
 namespace TestMsTest
 {
-    [TestClass]
-    public class UnitTest1
+    public class BenchmarkClass
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Benchmark(Description = "Рассчет с каждым числом")]
+        public List<int> TestOne()
         {
-
+            return Tasks.TaskOne();
+        }
+        [Benchmark(Description = "Составление чисел")]
+        public List<int> TestTwo()
+        {
+            return Tasks.TaskTwo();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TestLib
 {
-    public class Task
+    public class Tasks
     {
         public static List<int> TaskOne()
         {
